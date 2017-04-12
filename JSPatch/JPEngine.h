@@ -9,6 +9,9 @@
 #import <Foundation/Foundation.h>
 #import <JavaScriptCore/JavaScriptCore.h>
 
+#define JPEngine BXJEngine
+#define JPBoxing BXJBoxing
+#define JPExtension BXJExtension
 
 @interface JPEngine : NSObject
 
