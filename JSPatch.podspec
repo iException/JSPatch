@@ -1,5 +1,5 @@
 Pod::Spec.new do |s|
-  s.name         = "JSPatch"
+  s.name         = "BXTinker"
   s.version      = "1.1.3"
   s.summary      = "JSPatch bridge Objective-C and JavaScript. You can call any"  \
                    " Objective-C class and method in JavaScript by just" \
@@ -36,29 +36,29 @@ Pod::Spec.new do |s|
   end
 
   s.subspec "Extensions" do |ss|
-    ss.ios.source_files = "Extensions/*" 
+    ss.ios.source_files = "Extensions/*"
     ss.ios.public_header_files = "Extensions/*.h"
-    ss.dependency 'JSPatch/Core'
+    ss.dependency 'BXTinker/Core'
   end
 
   s.subspec "JPCFunction" do |ss|
     ss.ios.source_files = "Extensions/JPCFunction/**/*", "Extensions/JPLibffi/**/*.{h,m}"
-    ss.ios.public_header_files = "Extensions/JPCFunction/**/*.h", "Extensions/JPLibffi/**/*.h" 
+    ss.ios.public_header_files = "Extensions/JPCFunction/**/*.h", "Extensions/JPLibffi/**/*.h"
     ss.vendored_libraries = 'Extensions/JPLibffi/libffi/libffi.a'
-    ss.dependency 'JSPatch/Core'
+    ss.dependency 'BXTinker/Core'
   end
 
   s.subspec "JPBlock" do |ss|
-    ss.ios.source_files = "Extensions/JPBlock/**/*", "Extensions/JPLibffi/**/*.{h,m}" 
-    ss.ios.public_header_files = "Extensions/JPBlock/**/*.h", "Extensions/JPLibffi/**/*.h" 
+    ss.ios.source_files = "Extensions/JPBlock/**/*", "Extensions/JPLibffi/**/*.{h,m}"
+    ss.ios.public_header_files = "Extensions/JPBlock/**/*.h", "Extensions/JPLibffi/**/*.h"
     ss.vendored_libraries = 'Extensions/JPLibffi/libffi/libffi.a'
-    ss.dependency 'JSPatch/Core'
+    ss.dependency 'BXTinker/Core'
   end
 
   s.subspec "JPCFunctionBinder" do |ss|
-    ss.ios.source_files = "Extensions/JPCFunctionBinder/**/*" 
+    ss.ios.source_files = "Extensions/JPCFunctionBinder/**/*"
     ss.ios.public_header_files = "Extensions/JPCFunctionBinder/**/*.h"
-    ss.dependency 'JSPatch/Core'
+    ss.dependency 'BXTinker/Core'
   end
 
   s.subspec 'Loader' do |ss|
@@ -66,7 +66,7 @@ Pod::Spec.new do |s|
     ss.tvos.source_files = "Loader/**/*.{h,m,c}"
     ss.ios.public_header_files = "Loader/*.h"
     ss.tvos.public_header_files = "Loader/*.h"
-    ss.dependency 'JSPatch/Core'
+    ss.dependency 'BXTinker/Core'
     ss.library = 'z'
   end
 end
